@@ -12,7 +12,7 @@ const [newTask, setNewTask] = useState('');
 
 
 const addTask = () => {
-  if (newTask.trim() !== '') return;
+  if (newTask.trim() === '') return;
     const newTask = {key: (tasks.length +1 ).toString(), description: newTask, completed: false}
     setTasks([...tasks, newTask]);
     setNewTask('');
